@@ -5,45 +5,45 @@
       <h2 class="van-block-title">
         基本信息
       </h2>
-      <van-field v-model="obj.name" name="obj.name" label="姓名" :rules="[{ required: true, message: '姓名必填' }]" placeholder="请输入姓名" />
+      <van-field class="validate-field" v-model="obj.name" name="obj.name" label="姓名" :rules="[{ required: true, message: '姓名必填' }]" placeholder="请输入姓名" />
 
-      <van-field readonly clickable name="obj.sex" :value="obj.sex" label="性别" :rules="[{ required: true, message: '性别必填' }]" placeholder="点击选择性别" @click="showSexPicker = true"/>
+      <van-field class="validate-field" readonly clickable name="obj.sex" :value="obj.sex" label="性别" :rules="[{ required: true, message: '性别必填' }]" placeholder="点击选择性别" @click="showSexPicker = true"/>
       <van-popup v-model="showSexPicker" position="bottom">
         <van-picker show-toolbar :columns="['男', '女']" @confirm="onSexConfirm" @cancel="showSexPicker = false" />
       </van-popup>
 
-      <van-field readonly clickable name="obj.position" :value="obj.position" label="应聘职位" :rules="[{ required: true, message: '应聘职位必填' }]" placeholder="点击选择应聘职位" @click="showPositionPicker = true"/>
+      <van-field class="validate-field" readonly clickable name="obj.position" :value="obj.position" label="应聘职位" :rules="[{ required: true, message: '应聘职位必填' }]" placeholder="点击选择应聘职位" @click="showPositionPicker = true"/>
       <van-popup v-model="showPositionPicker" position="bottom">
         <van-picker show-toolbar :columns="['JAVA开发', 'JAVA开发（实习）', '测试', '测试（实习）', '需求', '需求（实习）', '项目经理']" @confirm="onPositionConfirm" @cancel="showPositionPicker = false"/>
       </van-popup>
 
-      <van-field readonly clickable v-model="obj.interviewer" name="obj.interviewer" label="面试官" :rules="[{ required: true, message: '面试官必填' }]" placeholder="点击选择面试官" @click="showInterviewerPicker = true" />
+      <van-field class="validate-field" readonly clickable v-model="obj.interviewer" name="obj.interviewer" label="面试官" :rules="[{ required: true, message: '面试官必填' }]" placeholder="点击选择面试官" @click="showInterviewerPicker = true" />
       <van-popup v-model="showInterviewerPicker" position="bottom">
         <van-picker show-toolbar :columns="['张巧飞-13552998408', '张秀伟-15110083909', '孙阿飞-17600224324']" @confirm="onInterviewerConfirm" @cancel="showInterviewerPicker = false" />
       </van-popup>
 
-      <van-field v-model="obj.phone" type="tel" name="obj.phone" label="手机号" :rules="[{ required: true, message: '手机号必填' }]" placeholder="请输入手机号" />
+      <van-field class="validate-field" v-model="obj.phone" type="tel" name="obj.phone" label="手机号" :rules="[{ required: true, message: '手机号必填' }]" placeholder="请输入手机号" />
 
-      <van-field v-model="obj.email" name="obj.email" label="邮箱" :rules="[{ required: true, message: '邮箱必填' }]" placeholder="请输入邮箱" />
+      <van-field class="validate-field" v-model="obj.email" name="obj.email" label="邮箱" :rules="[{ required: true, message: '邮箱必填' }]" placeholder="请输入邮箱" />
 
-      <van-field readonly clickable name="obj.birthday" :value="obj.birthday" label="出生日期" placeholder="点击选择时间" @click="showBirthdayPicker = true" />
+      <van-field class="validate-field" readonly clickable name="obj.birthday" :value="obj.birthday" label="出生日期" placeholder="点击选择时间" @click="showBirthdayPicker = true" />
       <van-popup v-model="showBirthdayPicker" position="bottom">
         <van-datetime-picker type="date" v-model="currentDate" title="选择年月日" :min-date="minDate" :max-date="maxDate" @confirm="onBirthdayConfirm" @cancel="showBirthdayPicker = false" />
       </van-popup>
 
-      <van-field v-model="obj.place" name="obj.place" label="籍贯" :rules="[{ required: true, message: '籍贯必填' }]" placeholder="请输入籍贯" />
+      <van-field class="validate-field" v-model="obj.place" name="obj.place" label="籍贯" :rules="[{ required: true, message: '籍贯必填' }]" placeholder="请输入籍贯" />
 
-      <van-field readonly clickable name="obj.nation" :value="obj.nation" label="民族" placeholder="点击选择民族" @click="showNationPicker = true" />
+      <van-field class="validate-field" readonly clickable name="obj.nation" :value="obj.nation" label="民族" placeholder="点击选择民族" @click="showNationPicker = true" />
       <van-popup v-model="showNationPicker" position="bottom">
         <van-picker show-toolbar :columns="nationColumns" @confirm="onNationConfirm" @cancel="showNationPicker = false" />
       </van-popup>
 
-      <van-field readonly clickable name="obj.marryStatus" :value="obj.marryStatus" label="婚姻状况" :rules="[{ required: true, message: '婚姻状况必填' }]" placeholder="点击选择婚姻状况" @click="showMarryPicker = true" />
+      <van-field class="validate-field" readonly clickable name="obj.marryStatus" :value="obj.marryStatus" label="婚姻状况" :rules="[{ required: true, message: '婚姻状况必填' }]" placeholder="点击选择婚姻状况" @click="showMarryPicker = true" />
       <van-popup v-model="showMarryPicker" position="bottom">
         <van-picker show-toolbar :columns="['未婚', '已婚']" @confirm="onMarryConfirm" @cancel="showMarryPicker = false" />
       </van-popup>
 
-      <van-field v-model="obj.address" rows="2" autosize label="现住址" type="textarea" placeholder="请输入现住址" />
+      <van-field class="validate-field" v-model="obj.address" rows="2" autosize label="现住址" type="textarea" placeholder="请输入现住址" />
     </div>
 
     <div class="van-block">
@@ -72,8 +72,8 @@
       <h2 class="van-block-title">
         其他
       </h2>
-      <van-field v-model="obj.currentSalary" name="obj.currentSalary" label="当前薪资" :rules="[{ required: true, message: '姓名必填' }]" placeholder="请输入你的当前薪资" />
-      <van-field v-model="obj.expectedSalary" name="obj.expectedSalary" label="期望薪资" :rules="[{ required: true, message: '姓名必填' }]" placeholder="请输入你的期望薪资"/>
+      <van-field class="validate-field" v-model="obj.currentSalary" name="obj.currentSalary" label="当前薪资" :rules="[{ required: true, message: '姓名必填' }]" placeholder="请输入你的当前薪资" />
+      <van-field class="validate-field" v-model="obj.expectedSalary" name="obj.expectedSalary" label="期望薪资" :rules="[{ required: true, message: '姓名必填' }]" placeholder="请输入你的期望薪资"/>
     </div>
     <div style="margin: 16px 16px 0">
       <van-button round block type="primary" native-type="submit">
@@ -89,14 +89,14 @@
       <div class="van-nav">
         <div class="van-nav-title">教育经历</div>
       </div>
-      <van-field v-model="obj.schoolName1" name="obj.schoolName1" label="学校名称" placeholder="请输入你的学校名称" />
-      <van-field readonly clickable :value="obj.education1" name="obj.education1" label="学历" placeholder="点击选择你的学历" @click="showEduPicker1 = true"/>
+      <van-field class="validate-field" v-model="obj.schoolName1" name="obj.schoolName1" label="学校名称" placeholder="请输入你的学校名称" />
+      <van-field class="validate-field" readonly clickable :value="obj.education1" name="obj.education1" label="学历" placeholder="点击选择你的学历" @click="showEduPicker1 = true"/>
       <van-popup v-model="showEduPicker1" position="bottom">
         <van-picker show-toolbar title="学历" :columns="educationPicker" @confirm="onEduConfirm1" @cancel="showEduPicker1 = false"/>
       </van-popup>
 
-      <van-field v-model="obj.major1" name="obj.major1" label="专业" placeholder="请输入你的专业" />
-      <van-field readonly clickable :value="obj.timeSolt1" name="obj.timeSolt1" label="时间段" placeholder="点击选择你的学历时间" @click="showTimeSoltPicker1 = true"/>
+      <van-field class="validate-field" v-model="obj.major1" name="obj.major1" label="专业" placeholder="请输入你的专业" />
+      <van-field class="validate-field" readonly clickable :value="obj.timeSolt1" name="obj.timeSolt1" label="时间段" placeholder="点击选择你的学历时间" @click="showTimeSoltPicker1 = true"/>
       <van-popup v-model="showTimeSoltPicker1" position="bottom">
         <van-picker show-toolbar title="学历时间" :columns="timeSoltPicker" @confirm="onTimeSoltConfirm1" @cancel="showTimeSoltPicker1 = false"/>
       </van-popup>
@@ -112,16 +112,16 @@
       <div class="van-nav">
         <div class="van-nav-title">教育经历</div>
       </div>
-      <van-field v-model="obj.schoolName2" name="obj.schoolName2" label="学校名称" placeholder="请输入你的学校名称"/>
+      <van-field class="validate-field" v-model="obj.schoolName2" name="obj.schoolName2" label="学校名称" placeholder="请输入你的学校名称"/>
 
-      <van-field readonly clickable :value="obj.education2" name="obj.education2" label="学历" placeholder="点击选择你的学历" @click="showEduPicker2 = true" />
+      <van-field class="validate-field" readonly clickable :value="obj.education2" name="obj.education2" label="学历" placeholder="点击选择你的学历" @click="showEduPicker2 = true" />
       <van-popup v-model="showEduPicker2" position="bottom">
         <van-picker show-toolbar title="学历" :columns="educationPicker" @confirm="onEduConfirm2" @cancel="showEduPicker2 = false"/>
       </van-popup>
 
-      <van-field v-model="obj.major2" name="obj.major2" label="专业" placeholder="请输入你的专业" />
+      <van-field class="validate-field" v-model="obj.major2" name="obj.major2" label="专业" placeholder="请输入你的专业" />
 
-      <van-field readonly clickable :value="obj.timeSolt2" name="obj.timeSolt2" label="时间段" placeholder="点击选择你的学历时间" @click="showTimeSoltPicker2 = true"/>
+      <van-field class="validate-field" readonly clickable :value="obj.timeSolt2" name="obj.timeSolt2" label="时间段" placeholder="点击选择你的学历时间" @click="showTimeSoltPicker2 = true"/>
       <van-popup v-model="showTimeSoltPicker2" position="bottom">
         <van-picker show-toolbar title="学历时间" :columns="timeSoltPicker" @confirm="onTimeSoltConfirm2" @cancel="showTimeSoltPicker2 = false"/>
       </van-popup>
@@ -137,13 +137,13 @@
       <div class="van-nav">
         <div class="van-nav-title">教育经历</div>
       </div>
-      <van-field v-model="obj.schoolName3" name="obj.schoolName3" label="学校名称" placeholder="请输入你的学校名称"/>
-      <van-field readonly clickable :value="obj.education3" name="obj.education3" label="学历" placeholder="点击选择你的学历" @click="showEduPicker3 = true" />
-      <van-popup v-model="showEduPicker3" position="bottom">
+      <van-field class="validate-field" v-model="obj.schoolName3" name="obj.schoolName3" label="学校名称" placeholder="请输入你的学校名称"/>
+      <van-field class="validate-field" readonly clickable :value="obj.education3" name="obj.education3" label="学历" placeholder="点击选择你的学历" @click="showEduPicker3 = true" />
+      <van-popup class="validate-field" v-model="showEduPicker3" position="bottom">
         <van-picker show-toolbar title="学历" :columns="educationPicker" @confirm="onEduConfirm3" @cancel="showEduPicker3 = false"/>
       </van-popup>
 
-      <van-field v-model="obj.major3" name="obj.major3" label="专业" placeholder="请输入你的专业" />
+      <van-field class="validate-field" v-model="obj.major3" name="obj.major3" label="专业" placeholder="请输入你的专业" />
 
       <van-field readonly clickable :value="obj.timeSolt3" name="obj.timeSolt3" label="时间段" placeholder="点击选择你的学历时间" @click="showTimeSoltPicker3 = true"/>
       <van-popup v-model="showTimeSoltPicker3" position="bottom">
@@ -582,5 +582,11 @@
   .van-block-title {
     color: #646566;
     font-size: 16px;
+  }
+  .validate-field > .van-field__label > span {
+    padding: 0px 13px 0px 0px;
+    background-repeat: no-repeat;
+    background-position: 100% 1px;
+    background-image: url(../../assets/star.png);
   }
 </style>
