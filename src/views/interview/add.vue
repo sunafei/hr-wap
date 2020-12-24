@@ -159,7 +159,7 @@
     <!--工作履历 区域一-->
     <van-popup v-model="showJob1" position="bottom" :style="{ height: '100%' }" >
       <div class="van-nav">
-        <div class="van-nav-title">教育经历</div>
+        <div class="van-nav-title">工作履历</div>
       </div>
       <van-field readonly clickable :value="obj.startDate1" name="obj.startDate1" label="开始时间" placeholder="点击选择工作开始时间" @click="showStartDatePicker1 = true"/>
       <van-popup v-model="showStartDatePicker1" position="bottom">
@@ -183,7 +183,7 @@
     <!--工作履历 区域二 -->
     <van-popup v-model="showJob2" position="bottom" :style="{ height: '100%' }" >
       <div class="van-nav">
-        <div class="van-nav-title">教育经历</div>
+        <div class="van-nav-title">工作履历</div>
       </div>
       <van-field readonly clickable :value="obj.startDate2" name="obj.startDate1" label="开始时间" placeholder="点击选择工作开始时间" @click="showStartDatePicker2 = true"/>
       <van-popup v-model="showStartDatePicker2" position="bottom">
@@ -206,7 +206,7 @@
     <!--工作履历 区域一-->
     <van-popup v-model="showJob3" position="bottom" :style="{ height: '100%' }" >
       <div class="van-nav">
-        <div class="van-nav-title">教育经历</div>
+        <div class="van-nav-title">工作履历</div>
       </div>
       <van-field readonly clickable :value="obj.startDate3" name="obj.startDate3" label="开始时间" placeholder="点击选择工作开始时间" @click="showStartDatePicker3 = true"/>
       <van-popup v-model="showStartDatePicker3" position="bottom">
