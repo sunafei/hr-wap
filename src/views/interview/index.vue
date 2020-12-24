@@ -48,7 +48,6 @@
           this.listQuery.queryCriteria.val = this.listQuery.name
         }
         this.fetchData()
-        console.log('执行查询操作')
       },
       handleCancel() {
         this.listQuery.queryCriteria.val = this.listQuery.name

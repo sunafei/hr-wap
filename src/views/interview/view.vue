@@ -69,8 +69,12 @@
 
     <div class="van-block">
       <h2 class="van-block-title">
-        面试评价
+        面试结果
       </h2>
+      <van-field readonly clickable name="result" :value="result" label="面试结果" placeholder="点击选择面试结果" @click="showResultPicker = true"/>
+      <van-popup v-model="showResultPicker" position="bottom">
+        <van-picker show-toolbar :columns="['未通过', '二面', '通过']" @confirm="onResultConfirm" @cancel="showResultPicker = false" />
+      </van-popup>
       <van-field v-model="evaluate" name="evaluate" rows="2" autosize label="评价" type="textarea" placeholder="请输入面试评价" />
     </div>
 
@@ -100,11 +104,13 @@
         id: '',
         obj: {},
         fileIds: [],
+        result: null,
         uploadAddr: process.env.BASE_API + '/api/uploadFile',
         evaluate: null,
         imageShow: false,
         previewImages: [],
-        imageIndex: 0
+        imageIndex: 0,
+        showResultPicker: false
       }
     },
     created() {
@@ -131,6 +137,10 @@
       },
       imageChange(index) {
         this.imageIndex = index
+      },
+      onResultConfirm(value) {
+        this.result = value
+        this.showResultPicker = false
       },
       handleDelete() {
         Dialog.confirm({
@@ -161,6 +171,7 @@
             })
           }
           this.evaluate = this.obj.evaluate
+          this.result = this.obj.result
         })
       },
       onSubmit(values) {
@@ -208,5 +219,9 @@
   }
   .fileStyle {
     padding: 0 15px;
+  }
+  .van-block-title {
+    color: #646566;
+    font-size: 16px;
   }
 </style>

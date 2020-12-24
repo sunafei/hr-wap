@@ -579,4 +579,8 @@
     font-weight: bold;
     margin-right: 10px;
   }
+  .van-block-title {
+    color: #646566;
+    font-size: 16px;
+  }
 </style>
