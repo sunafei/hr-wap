@@ -19,7 +19,7 @@
 
       <van-field readonly clickable v-model="obj.interviewer" name="obj.interviewer" label="面试官" :rules="[{ required: true, message: '面试官必填' }]" placeholder="点击选择面试官" @click="showInterviewerPicker = true" />
       <van-popup v-model="showInterviewerPicker" position="bottom">
-        <van-picker show-toolbar :columns="['张秀伟', '孙阿飞']" @confirm="onInterviewerConfirm" @cancel="showInterviewerPicker = false" />
+        <van-picker show-toolbar :columns="['张巧飞-13552998408', '张秀伟-15110083909', '孙阿飞-17600224324']" @confirm="onInterviewerConfirm" @cancel="showInterviewerPicker = false" />
       </van-popup>
 
       <van-field v-model="obj.phone" type="tel" name="obj.phone" label="手机号" :rules="[{ required: true, message: '手机号必填' }]" placeholder="请输入手机号" />
@@ -173,7 +173,7 @@
       <van-field v-model="obj.company1" name="obj.company1" label="单位全称" placeholder="请输入单位全称" />
       <van-field v-model="obj.post1" name="obj.post1" label="职位" placeholder="请输入职位" />
       <van-field v-model="obj.superior1" name="obj.superior1" label="直接上级" placeholder="请输入直接上级姓名" />
-      <van-field v-model="obj.tel1" name="obj.tel1" label="电话" placeholder="请输入直接上级电话" type="tel" />
+      <van-field v-model="obj.tel1" name="obj.tel1" label="直接上级电话" placeholder="请输入直接上级电话" type="tel" />
       <div style="margin: 16px 16px 0">
         <van-button round block type="primary" @click="saveJob1" native-type="button">
           保存
@@ -196,7 +196,7 @@
       <van-field v-model="obj.company2" name="obj.company2" label="单位全称" placeholder="请输入单位全称" />
       <van-field v-model="obj.post2" name="obj.post2" label="职位" placeholder="请输入职位" />
       <van-field v-model="obj.superior2" name="obj.superior2" label="直接上级" placeholder="请输入直接上级姓名" />
-      <van-field v-model="obj.tel2" name="obj.tel2" label="电话" placeholder="请输入直接上级电话" type="tel" />
+      <van-field v-model="obj.tel2" name="obj.tel2" label="直接上级电话" placeholder="请输入直接上级电话" type="tel" />
       <div style="margin: 16px 16px 0">
         <van-button round block type="primary" @click="saveJob2" native-type="button">
           保存
@@ -219,7 +219,7 @@
       <van-field v-model="obj.company3" name="obj.company3" label="单位全称" placeholder="请输入单位全称" />
       <van-field v-model="obj.post3" name="obj.post3" label="职位" placeholder="请输入职位" />
       <van-field v-model="obj.superior3" name="obj.superior3" label="直接上级" placeholder="请输入直接上级姓名" />
-      <van-field v-model="obj.tel3" name="obj.tel3" label="电话" placeholder="请输入直接上级电话" type="tel" />
+      <van-field v-model="obj.tel3" name="obj.tel3" label="直接上级电话" placeholder="请输入直接上级电话" type="tel" />
       <div style="margin: 16px 16px 0">
         <van-button round block type="primary" @click="saveJob3" native-type="button">
           保存

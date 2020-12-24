@@ -6,7 +6,7 @@
     <van-empty
       class="custom-image"
       image="https://img.yzcdn.cn/vant/custom-empty-image.png"
-      description="登记成功，请继续进行面试!"
+      description="登记成功，请等待面试官!"
     />
   </van-form>
 </template>
