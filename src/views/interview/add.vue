@@ -72,7 +72,7 @@
       <h2 class="van-block-title">
         其他
       </h2>
-      <van-field class="validate-field" v-model="obj.currentSalary" name="obj.currentSalary" label="当前薪资" :rules="[{ required: true, message: '姓名必填' }]" placeholder="请输入你的当前薪资" />
+      <van-field v-model="obj.currentSalary" name="obj.currentSalary" label="当前薪资" placeholder="请输入你的当前薪资" />
       <van-field class="validate-field" v-model="obj.expectedSalary" name="obj.expectedSalary" label="期望薪资" :rules="[{ required: true, message: '姓名必填' }]" placeholder="请输入你的期望薪资"/>
     </div>
     <div style="margin: 16px 16px 0">
