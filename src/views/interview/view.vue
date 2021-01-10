@@ -176,7 +176,7 @@
       },
       onSubmit(values) {
         const fileJson = JSON.stringify(this.fileIds).replace('[', '').replace(']', '')
-        const param = { id: this.id, 'fileIds': fileJson, 'evaluate': this.evaluate }
+        const param = { id: this.id, 'fileIds': fileJson, 'evaluate': this.evaluate, 'result': this.result }
         evaluate(param).then((result) => {
           Notify({ type: 'success', message: '保存成功！' })
         })
