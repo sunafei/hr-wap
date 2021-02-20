@@ -73,7 +73,7 @@
       </h2>
       <van-field readonly clickable name="result" :value="result" label="面试结果" placeholder="点击选择面试结果" @click="showResultPicker = true"/>
       <van-popup v-model="showResultPicker" position="bottom">
-        <van-picker show-toolbar :columns="['未通过', '二面', '通过']" @confirm="onResultConfirm" @cancel="showResultPicker = false" />
+        <van-picker show-toolbar :columns="['不合适', '可以考虑', '初试通过', '可以入职']" @confirm="onResultConfirm" @cancel="showResultPicker = false" />
       </van-popup>
       <van-field v-model="evaluate" name="evaluate" rows="2" autosize label="评价" type="textarea" placeholder="请输入面试评价" />
     </div>
