@@ -20,7 +20,7 @@ export const constantRouterMap = [{
   component: () => import('@/views/404'),
   hidden: true
 }, {
-  path: '/',
+  path: '/ephr',
   component: () => import('@/views/interview/index')
 }, {
   path: '/interview/view/:id',
