@@ -19,7 +19,7 @@
 
       <van-field class="validate-field" readonly clickable v-model="obj.interviewer" name="obj.interviewer" label="面试官" :rules="[{ required: true, message: '面试官必填' }]" placeholder="点击选择面试官" @click="showInterviewerPicker = true" />
       <van-popup v-model="showInterviewerPicker" position="bottom">
-        <van-picker show-toolbar :columns="['张巧飞-13552998408', '张秀伟-15110083909', '孙阿飞-17600224324']" @confirm="onInterviewerConfirm" @cancel="showInterviewerPicker = false" />
+        <van-picker show-toolbar :columns="['张巧飞-13552998408', '张秀伟-15110083909', '孙阿飞-17600224324', '李孝明-13138852196']" @confirm="onInterviewerConfirm" @cancel="showInterviewerPicker = false" />
       </van-popup>
 
       <van-field class="validate-field" v-model="obj.phone" type="tel" name="obj.phone" label="手机号" :rules="[{ required: true, message: '手机号必填' }]" placeholder="请输入手机号" />
