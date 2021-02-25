@@ -23,8 +23,20 @@ export const constantRouterMap = [{
   path: '/ephr',
   component: () => import('@/views/interview/index')
 }, {
+  path: '/ephr_pc',
+  component: () => import('@/views/interview/index1')
+}, {
+  path: '/ephr_m',
+  component: () => import('@/views/interview/index2')
+}, {
   path: '/interview/view/:id',
   component: () => import('@/views/interview/view')
+}, {
+  path: '/interview/view_m/:id',
+  component: () => import('@/views/interview/view1')
+}, {
+  path: '/interview/view_pc/:id',
+  component: () => import('@/views/interview/view2')
 }, {
   path: '/interview/add',
   component: () => import('@/views/interview/add')
