@@ -48,7 +48,7 @@
 
     <div class="van-block">
       <h2 class="van-block-title">
-        学习、培训情况
+        学习、培训情况<span class="validate-fields"></span>
         <van-icon name="add-o" class="icon-add" @click="showEduFunc" v-show="eduAddIcon"/>
       </h2>
       <van-skeleton title row="3" :loading="eduLoading">
@@ -511,6 +511,12 @@
         return val
       },
       onSubmit(values) {
+        if (this.obj.schoolName1.length === 0 || this.obj.education1.length === 0 || this.obj.major1.length === 0 || this.obj.timeSolt1.length === 0) {
+          Dialog.alert({
+            message: '请填写至少一条"学习、培训情况"'
+          })
+          return true
+        }
         Dialog.confirm({
           title: '声明',
           message: '本人声明所提供一切信息均准确且属实，同意公司对本人所提供信息作核查，如有隐瞒或虚假，入职后公司有权即时解聘本人而无需做出任何赔偿。'
@@ -584,6 +590,13 @@
     font-size: 16px;
   }
   .validate-field > .van-field__label > span {
+    padding: 0px 13px 0px 0px;
+    background-repeat: no-repeat;
+    background-position: 100% 1px;
+    background-image: url(../../assets/star.png);
+  }
+
+  .validate-fields {
     padding: 0px 13px 0px 0px;
     background-repeat: no-repeat;
     background-position: 100% 1px;

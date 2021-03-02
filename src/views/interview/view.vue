@@ -10,12 +10,11 @@
     },
     mounted() {
       this.id = this.$route.params.id
-      this.$router.push('/interview/view_m/' + this.id)
-      // if (this._isMobile()) {
-      //   this.$router.push('/interview/view_m/' + this.id)
-      // } else {
-      //   this.$router.push('/interview/view_pc/' + this.id)
-      // }
+      if (this._isMobile()) {
+        this.$router.push('/interview/view_m/' + this.id)
+      } else {
+        this.$router.push('/interview/view_pc/' + this.id)
+      }
     },
     methods: {
       _isMobile() {

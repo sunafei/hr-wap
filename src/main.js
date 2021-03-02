@@ -7,6 +7,8 @@ import 'normalize.css/normalize.css'// A modern alternative to CSS resets
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import locale from 'element-ui/lib/locale/lang/zh-CN' // lang i18n
+import vueEsign from 'vue-esign'
+Vue.use(vueEsign)
 
 import '@/styles/index.scss' // global css
 
