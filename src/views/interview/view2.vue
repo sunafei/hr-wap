@@ -3,12 +3,14 @@
     <van-nav-bar title="应聘人员信息" left-arrow @click-left="handleBack" />
     <div style="display: inline-block;">
       <el-form label-width="100px" ref="form">
+        <br>
         <div style="text-align: left;height: 30px;font-size: 20px">
-          申请职位{{obj.position}}
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          面试人{{obj.interviewer}}
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          面试时间
+
+          申请职位：{{obj.position}}
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          面试人：{{obj.interviewer.split("-")[0]}}
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          面试时间：
           {{
           new Date(obj.createDate)
           .toISOString().split("T")[0]
@@ -52,7 +54,7 @@
             <td width="120px">期望薪资</td>
             <td width="200px" colspan="3" align="left">&nbsp;&nbsp;&nbsp;&nbsp;{{obj.expectedSalary}}</td>
           </tr>
-          <tr>
+          <tr style="height: 40px;">
             <td align="left" colspan="6" style="font-size: 20px;font-weight: bold">工作履历</td>
           </tr>
           <tr>
@@ -67,25 +69,25 @@
           <tr>
             <td>{{obj.startDate3}}  {{obj.endDate3}}</td><td colspan="2">{{obj.company3}}</td><td>{{obj.post3}}</td><td>{{obj.superior3}}</td><td>{{obj.tel3}}</td>
           </tr>
-          <tr>
+          <tr style="height: 40px;">
             <td align="left" colspan="6" style="font-size: 20px;font-weight: bold">学习、培训情况</td>
           </tr>
           <tr>
-            <td>起止时间</td><td colspan="3">学校名称</td><td>专业</td><td>学历</td>
+            <td>起止时间</td><td colspan="3">学校名称</td><td>学历</td><td>专业</td>
           </tr>
           <tr>
-            <td>{{obj.timeSolt1}}</td><td colspan="3">{{obj.schoolName1}}</td><td>{{obj.major1}}</td><td>{{obj.education1}}</td>
+            <td>{{obj.timeSolt1}}</td><td colspan="3">{{obj.schoolName1}}</td><td>{{obj.education1}}</td><td>{{obj.major1}}</td>
           </tr>
           <tr>
-            <td>{{obj.timeSolt2}}</td><td colspan="3">{{obj.schoolName2}}</td><td>{{obj.major2}}</td><td>{{obj.education2}}</td>
+            <td>{{obj.timeSolt2}}</td><td colspan="3">{{obj.schoolName2}}</td><td>{{obj.education2}}</td><td>{{obj.major2}}</td>
           </tr>
           <tr>
-            <td>{{obj.timeSolt3}}</td><td colspan="3">{{obj.schoolName3}}</td><td>{{obj.major3}}</td><td>{{obj.education3}}</td>
+            <td>{{obj.timeSolt3}}</td><td colspan="3">{{obj.schoolName3}}</td><td>{{obj.education3}}</td><td>{{obj.major3}}</td>
           </tr>
           <tr>
             <td align="left" colspan="6" style="font-size: 20px;font-weight: bold">面试结果</td>
           </tr>
-          <tr align="center">
+          <tr align="center" style="height: 40px;">
             <td width="120px">
               面试结果
             </td>
