@@ -44,7 +44,7 @@
           <el-button @click="handleUpdate(scope.row)" type="primary" size="small">编辑</el-button>
           <!--<el-button size="mini" type="danger" @click="handleDelete(scope.row)">删除</el-button>-->
           <el-button type="danger" size="small">
-            <a :href="'/apis/api/download/' + scope.row.id">下载登记表</a>
+            <a :href="'/api/download/' + scope.row.id">下载登记表</a>
           </el-button>
         </template>
       </el-table-column>
